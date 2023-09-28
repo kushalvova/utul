@@ -28,7 +28,17 @@ body {
   margin: 0 auto;
 }
 
-.header__top-slogan {
+.header {
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.1rem solid #dddcdb;
+  background-color: #ffffff;
+}
+
+.top-slogan {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,17 +48,11 @@ body {
   color: #ffffff;
 }
 
-.header__top-container {
+.top-slogan__container {
   text-align: center;
 }
 
-.header__bottom-panel {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  background-color: #ffffff;
-}
-
-.header__bottom-container {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +63,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 10rem;
 }
 .header__right {
   display: flex;
@@ -116,14 +120,15 @@ body {
 }
 
 .btn {
-  padding: 0.5rem;
+  padding: 1rem 2rem;
   border: solid 0.1rem;
   border-radius: 0.5rem;
   font-family: 'TenorSans', sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #5b665c;
   background-color: #00000000;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -148,14 +153,12 @@ body {
 
 .first-section__container {
   display: flex;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 3rem 0;
   gap: 2rem;
 }
 
 .first-section__description-container,
 .first-section__img-container {
-  width: 50%;
   padding: 2rem 0;
 }
 
@@ -164,14 +167,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  width: 40%;
   gap: 4rem;
   font-size: 2rem;
 }
 
-.first-section__text {
+.first-section__img-container {
+  width: 60%;
+}
+
+.first-section__text-top,
+.first-section__text-bottom {
   max-width: 45rem;
-  text-align: center;
+  text-align: left;
+}
+
+.first-section__text-top {
+  font-size: 4rem;
+}
+
+.first-section__text-bottom {
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .first-section__img {
@@ -179,7 +197,8 @@ body {
   border-radius: 1rem;
 }
 
-.second-section {
+.second-section,
+.fourth-section {
   background-color: #ffffff;
 }
 
@@ -189,28 +208,28 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .second-section__text,
 .third-section__text {
-  max-width: 90rem;
-  text-align: center;
+  max-width: 110rem;
+  text-align: left;
   color: #1d1d1b;
-  font-size: 1.8rem;
+  font-size: 3rem;
   padding: 2rem 0;
 }
 
 .second-section__contant,
 .third-section__contant {
   display: flex;
-  width: 70%;
+  width: 100%;
   padding: 2rem 0;
 }
 
 .second-section__img-container,
 .third-section__img-container {
-  width: 45%;
+  width: 60%;
 }
 
 .second-section__img,
@@ -226,13 +245,64 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  width: 55%;
+  width: 40%;
 }
 
 .second-section__description-text {
   text-align: center;
   color: #1d1d1b;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 110rem;
+  gap: 2rem;
+}
+
+.stats__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.stats__card {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  max-width: 30rem;
+  gap: 1rem;
+}
+
+.stats__card-title {
+  font-size: 2.3rem;
+}
+
+.stats__card-description {
+  font-size: 1.5rem;
+}
+
+.stats__card-img {
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.money {
+  background-image: url('./src/img/money.png');
+}
+
+.time {
+  background-image: url('./src/img/time.png');
+}
+
+.space {
+  background-image: url('./src/img/space.png');
 }
 
 .footer {
@@ -273,4 +343,101 @@ body {
 
 .tik-tok {
   background-image: url('./src/img/social/TikTok_white.png');
+}
+
+/* Slider start*/
+
+.page-title {
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  z-index: 0;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+/* Slider end*/
+
+/**/
+
+[data-tooltip] {
+  position: relative; /* Относительное позиционирование */ 
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 300px; /* Ширина подсказки */
+  left: 0; top: 0; /* Положение подсказки */
+  background: #3989c9; /* Синий цвет фона */
+  color: #fff; /* Цвет текста */
+  padding: 0.5em; /* Поля вокруг текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: 1s; /* Время появления подсказки */
+} 
+
+[data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  top: 2em; /* Положение подсказки */
+}
+
+/**/
+
+.booking-section {
+  height: 65rem;
+  width: 100%;
+  background-image: url('./src/img/img_first_section.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-section__text {
+  max-width: 70%;
+  margin: 0;
+}
+
+.container__booking-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
 }

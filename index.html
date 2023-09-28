@@ -8,30 +8,28 @@
   <title>Utul</title>
 </head>
 <body>
-  <header class="header">
-    <div class="header__top-slogan">
-      <div class="container header__top-container">
-        <span>COЗДАЁМ УЮТ В ВАШЕМ ДОМЕ</span>
-      </div>
+  <div class="top-slogan">
+    <div class="container top-slogan__container">
+      <span>COЗДАЁМ УЮТ В ВАШЕМ ДОМЕ</span>
     </div>
-    <div class="header__bottom-panel">
-      <div class="container header__bottom-container">
-        <div class="header__left">
-          <a class="logo" href="#">
-            <img class="logo__img" src="./src/img/logo-utul.png" alt="Company logo">
-          </a>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#">Utul</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Удаленная работа</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">FAQ</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header__right">
-          <button class="btn btn-light" href="#">Кабины</button>
-          <button class="btn btn-dark" href="#">Контакты</button>
-        </div>
+  </div>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__left">
+        <a class="logo" href="./index.html">
+          <img class="logo__img" src="./src/img/logo-utul.png" alt="Company logo">
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Utul live</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Удаленная работа</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <a class="btn btn-light" href="./cabine.html">Кабины</a>
+        <a class="btn btn-dark" href="#">Контакты</a>
       </div>
     </div>
   </header>
@@ -39,8 +37,11 @@
     <section class="first-section">
       <div class="container first-section__container">
         <div class="first-section__description-container">
-          <p class="first-section__text">Проблема нехватки личного пространства дома знакома многим,  
-            мы нашли решение – место где можно побыть с собой наедине</p>
+          <div>
+            <p class="first-section__text-top">Работайте продуктивнее,</p>
+            <p class="first-section__text-top">живите комфортнее:</p>
+            <p class="first-section__text-bottom">наше решение для вашего дома</p>
+          </div>
           <button class="btn btn-dark" href="#">Узнать подробнее</button>
         </div>
         <div class="first-section__img-container">
@@ -55,11 +56,31 @@
           в будущее работы – где продуктивность и уют сочетаются в идеальном балансе.</p>
         <div class="second-section__contant">
           <div class="second-section__img-container">
-            <img src="./src/img/img_second_section.jpg" alt="Изображение интерьера" class="second-section__img">
+            <img src="./src/img/img_first_section.jpg" alt="Изображение интерьера" class="second-section__img">
           </div>
           <div class="second-section__description-container">
             <p class="second-section__description-text">Ваше пространство, ваш успех</p>
             <button class="btn btn-dark" href="#">Узнать подробнее</button>
+          </div>
+        </div>
+        <div class="stats">
+          <p class="second-section__text">Статистика</p>
+          <div class="stats__container">
+            <div class="stats__card">
+              <div class="stats__card-img money"></div>
+              <p class="stats__card-title">Экономия денег</p>
+              <p class="stats__card-description">Дешевле,чем сделать отдельный кабинет</p>
+            </div>
+            <div class="stats__card">
+              <div class="stats__card-img space"></div>
+              <p class="stats__card-title">Экономия места</p>
+              <p class="stats__card-description">Занимает меньше 1,6 кв.м у вас дома</p>
+            </div>
+            <div class="stats__card">
+              <div class="stats__card-img time"></div>
+              <p class="stats__card-title">Экономия времени</p>
+              <p class="stats__card-description">Сборка осуществляется меньше чем за один час</p>
+            </div>
           </div>
         </div>
       </div>
@@ -73,9 +94,42 @@
             <button class="btn btn-dark btn-wide" href="#">Utul</button>
           </div>
           <div class="third-section__img-container">
-            <img src="./src/img/img_third_section.jpg" alt="Изображение интерьера" class="third-section__img">
+            <img src="./src/img/img_first_section.jpg" alt="Изображение интерьера" class="second-section__img">
           </div>
         </div>
+        <div class="stats">
+          <p class="second-section__text">Статистика</p>
+          <div class="stats__container">
+            <div class="stats__card">
+              <div class="stats__card-img money"></div>
+              <p class="stats__card-title">Мобильный</p>
+              <p class="stats__card-description">Можно поставить в любое место в жилье</p>
+            </div>
+            <div class="stats__card">
+              <div class="stats__card-img space"></div>
+              <p class="stats__card-title">Универсальный</p>
+              <p class="stats__card-description">Может интегрироваться в любой дизайн помещения</p>
+            </div>
+            <div class="stats__card">
+              <div class="stats__card-img time"></div>
+              <p class="stats__card-title">Функциональный</p>
+              <p class="stats__card-description">Дополняется различными аксессуарами</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fourth-section">
+      <div class="slider-container">
+        <div class="slider">
+          <img src="./src/img/1.png" width="600" height="400" alt="Белый пушистый кот">
+          <img src="./src/img/2.png" width="600" height="400" alt="Рыжий пушистый кот">
+          <img src="./src/img/3.png" width="600" height="400" alt="Рыжий пушистый кот с белой грудкой">
+          <img src="./src/img/4.png" width="600" height="400" alt="Белый пушистый кот спит">
+          <img src="./src/img/5.png" width="600" height="400" alt="Рыжий пушистый кот с голубыми глазами">
+        </div>
+        <button class="prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+        <button class="next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
       </div>
     </section>
   </main>
@@ -88,5 +142,6 @@
       <a href="#"><div class="contacts-link tik-tok"></div></a>
     </div>
   </footer>
+  <script src="./index.js"></script>
 </body>
 </html>
